@@ -1,0 +1,30 @@
+# TODO: Add comment
+# 
+# Author: till
+###############################################################################
+
+#This function creates a least squares estimator generator with the first "dimension" 
+#functions of the dictionary
+#
+#@param dictionary
+#@param dimension
+leastSquaresEstimatorGenerator <- function (dictionary, dimension){
+	basis <- function(datapoint){
+		sapply(1:dimension,function(x){t(dictionary(x)(datapoint))})
+	}
+	
+	leastSquaresEstimatorGeneratorHelper <- function (xdatapoints,ydatapoints){
+		X<-basis(xdatapoints)
+
+		theta = solve((t(X)%*%X),t(X)%*%ydatapoints)
+		print(theta)
+		
+		estimator <- function(datapoints){	
+			basis(datapoints)%*%theta
+		}
+		
+		estimator
+	}
+	
+	leastSquaresEstimatorGeneratorHelper
+}
