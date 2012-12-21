@@ -17,7 +17,7 @@ fun <- function (x) { sin(2*pi*5*x)*cos(2*pi*x)+0.5*sin(5*2*pi*(x-0.5))}
 #fun <- function(x){(x-0.1)*(x-0.5)*(x-0.9)}
 #fun <- function(x){(1-x)*exp(x)}
 xdatapoints <-(1:numdatapoints)/numdatapoints*(b-a)+a
-ydatapoints <- fun(xdatapoints)+rnorm(numdatapoints,sd=0.5)
+ydatapoints <- fun(xdatapoints)+rnorm(numdatapoints,sd=0.1)
 xpoints <- (1:1000)/1000*(b-a)+a
 minValue<-2^.Machine$double.digits
 minParameter <-0

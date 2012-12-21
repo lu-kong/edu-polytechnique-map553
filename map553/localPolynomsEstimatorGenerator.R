@@ -75,7 +75,7 @@ localPolynomsEstimatorGenerator <- function(ordre,h,noyau,dimension){
 					})
 
 			}
-			sapply(split(x,rep(1:length(x)/dimension,each=dimension)),helper)
+			sapply(split(x,rep(1:(length(x)/dimension),each=dimension)),helper)
 		}
 	}
 

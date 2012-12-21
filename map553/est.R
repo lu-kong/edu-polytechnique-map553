@@ -5,15 +5,16 @@
 
 source("localPolynomsEstimation.R")
 source("gaussianNoyau.R")
+source("normalize.R")
 
 numdatapoints <- 100
-dimension <- 2
+dimension <- 1
 blocksize <-10
 database <- read.csv("../données/workingBase.csv")
 ydatapoints <- database[,3]
-xdatapoints <- rbind(database[,2],database[,4])
-a<--0.5
-b<-0.5
+xdatapoints <- database[,1]#rbind(database[,2],database[,4])
+a<-0
+b<-1
 xpoints <- (1:20)/20*(b-a)+a
 ytemp <- rep(xpoints,each=length(xpoints))
 xtemp <- rep(xpoints,length(xpoints))
@@ -24,14 +25,13 @@ x2points <- rbind(xtemp,ytemp)
 # xdatapoints <- rbind(rnorm(numdatapoints,mean=(b-a)/2,sd=(b-a)/4),rnorm(numdatapoints,mean=(b-a)/2,sd=(b-a)/4))
 xdatapoints <- normalize(xdatapoints)
 
-plot(xdatapoints[1,],xdatapoints[2,])
+plot(xdatapoints,ydatapoints)
 
 # ydatapoints = fun(xdatapoints)
-
-ordre <- 2
+ordre <- 0
 
 estimator<-localPolynomsEstimation(xdatapoints,ydatapoints,ordre,dimension,gaussianNoyau(dimension),blocksize,0.01,0.75,0.01);
-estimatedpoints <- estimator(x2points)
-#plot(xdatapoints,ydatapoints)
-#lines(xpoints,estimatedpoints)
-persp(xpoints,xpoints,matrix(estimatedpoints,length(xpoints),length(xpoints)))
+estimatedpoints <- estimator(xpoints)
+plot(xdatapoints,ydatapoints)
+lines(xpoints,estimatedpoints)
+#persp(xpoints,xpoints,matrix(estimatedpoints,length(xpoints),length(xpoints)))

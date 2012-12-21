@@ -26,9 +26,7 @@ crossValidation <- function(xdatapoints, ydatapoints, estimatorGenerator,dimensi
 		estimator <- estimatorGenerator(xlearningpoints,ylearningpoints)
 		
 		numblockdatapoints <- min(blocksize,numdatapoints-index+1)
-
 		temprisk <- crossprod((ytestpoints-estimator(xtestpoints)),(ytestpoints-estimator(xtestpoints)))
-		
 		risk <- risk + temprisk/numblockdatapoints
 	}
 	
