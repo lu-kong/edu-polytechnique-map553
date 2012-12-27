@@ -5,16 +5,17 @@
 
 localPolynomsEstimatorGenerator <- function(ordre,h,noyau,dimension){
 	calcNumberElements <- function(ordre){
-			number <- ordre +1
-			if(dimension>1){
-				for(i in 2:dimension){
-					number <- (number+2)*(number+1)/2
-				}
-			}
-			number
+      n <- dimension +ordre
+      a <- 1
+      b <- 1
+      for(i in 1:dimension){
+        a <- a*(n-i+1)
+        b <- b*i
+      }
+      
+      a/b
 		}
 	localPolynomsEstimatorHelper <- function(xdatapoints,ydatapoints) {
-		
 
 		calcK <- function(xdatapoints,x){
 			x<- rep(x,length(xdatapoints)/dimension)

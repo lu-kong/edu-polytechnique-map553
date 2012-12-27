@@ -1,36 +1,21 @@
-source("crossValidation.R")
-source("dummyEstimatorGenerator.R")
-source("leastSquaresEstimatorGenerator.R")
+source("normalize.R")
 source("trigonometricDictionary.R")
+source("leastSquaresEstimation.R")
 
-numdatapoints <- 400
 dimension <- 1
 blocksize <-20
 database <- read.csv("../données/workingBase.csv")
 ydatapoints <- database[,3]
-xdatapoints <- database[,1]
-a<-min(xdatapoints)
-b<-max(xdatapoints)
+xdatapoints <- database[,2]
+a<-0
+b<-1
 xpoints <- (1:1000)/1000*(b-a)+a
-minValue<-2^.Machine$double.digits
-minParameter <-0
 
+xdatapoints <- normalize(xdatapoints)
 
-for(i in 1:7){
-  cat("i:",i,"\n")
-  value<-crossValidation(xdatapoints,ydatapoints,leastSquaresEstimatorGenerator(trigonometricDictionary(dimension,a,b),i),dimension,blocksize)
-  
-  if(value < minValue){
-    minValue <- value
-    minParameter <- i
-  }
-  
-  cat("value:",value,"\n")
-  estimator<-leastSquaresEstimatorGenerator(trigonometricDictionary(dimension,a,b),i)(xdatapoints,ydatapoints);
-}
+dict <- trigonometricDictionary(dimension,a,b)
+estimator <- leastSquaresEstimation(xdatapoints,ydatapoints,dimension,dict,blocksize,1,7)
 
-cat('Min parameter:',minParameter,'\n')
-estimator<-leastSquaresEstimatorGenerator(trigonometricDictionary(dimension,a,b),minParameter)(xdatapoints,ydatapoints);
 estimatedpoints <- estimator(xpoints)
 plot(xpoints,estimatedpoints)
 points(xdatapoints,ydatapoints)
