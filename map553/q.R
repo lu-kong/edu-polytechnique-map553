@@ -46,30 +46,30 @@ ordre <- 5
 dimension <- 1
 blocksize <- 80
 
-# estimatorGDPExp<-localPolynomsEstimation(final$Export,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01);
-# plotHelper1D(final$Export,domainExport,"Export ratio",final$GDP,domainGDP,"GDP",estimatorGDPExp,"Export ratio to GDP")
-# 
-# estimatorGDPExpLS <- leastSquaresEstimation(final$Export,final$GDP,dimension,dict,blocksize,1,20)
-# plotHelper1D(final$Export,domainImport,"Export ratio",final$GDP,domainGDP,"GDP",estimatorGDPExpLS,"Export ratio to GDP LS")
-# 
-# estimatorGDPImp<-localPolynomsEstimation(final$Import,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01);
-# plotHelper1D(final$Import,domainImport,"Import ratio",final$GDP,domainGDP,"GDP",estimatorGDPImp,"Import ratio to GDP")
-# 
-# estimatorGDPImpLS <- leastSquaresEstimation(final$Import,final$GDP,dimension,dict,blocksize,1,20)
-# plotHelper1D(final$Import,domainImport,"Import ratio",final$GDP,domainGDP,"GDP",estimatorGDPImpLS,"Import ratio to GDP LS")
-# 
-# 
-# estimatorGDPLife <- localPolynomsEstimation(final$Life.expectation,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01)
-# plotHelper1D(final$Life.expectation,domainLifeExpectation,"Life expectation",final$GDP,domainGDP,"GDP",estimatorGDPLife,"Life expectation to GDP")
-# 
-# estimatorGDPLifeLS <- leastSquaresEstimation(final$Life.expectation,final$GDP,dimension,dict,blocksize,1,20)
-# plotHelper1D(final$Life.expectation,domainLifeExpectation,"Life expectation",final$GDP,domainGDP,"GDP",estimatorGDPLifeLS,"Life expectation to GDP LS")
-# 
-# estimatorGDPWorker <- localPolynomsEstimation(final$Worker,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01)
-# plotHelper1D(final$Worker,domainWorker,"Worker ratio to population",final$GDP,domainGDP,"GDP",estimatorGDPWorker,"Worker ratio to GDP")
-# 
-# estimatorGDPWorkerLS <- leastSquaresEstimation(final$Worker,final$GDP,dimension,dict,blocksize,1,20)
-# plotHelper1D(final$Worker,domainWorker,"Worker ratio to population",final$GDP,domainGDP,"GDP",estimatorGDPWorkerLS,"Worker ratio to GDP LS")
+estimatorGDPExp<-localPolynomsEstimation(final$Export,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01);
+plotHelper1D(final$Export,domainExport,"Export ratio",final$GDP,domainGDP,"GDP",estimatorGDPExp,"Export ratio to GDP")
+
+estimatorGDPExpLS <- leastSquaresEstimation(final$Export,final$GDP,dimension,dict,blocksize,1,20)
+plotHelper1D(final$Export,domainImport,"Export ratio",final$GDP,domainGDP,"GDP",estimatorGDPExpLS,"Export ratio to GDP LS")
+
+estimatorGDPImp<-localPolynomsEstimation(final$Import,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01);
+plotHelper1D(final$Import,domainImport,"Import ratio",final$GDP,domainGDP,"GDP",estimatorGDPImp,"Import ratio to GDP")
+
+estimatorGDPImpLS <- leastSquaresEstimation(final$Import,final$GDP,dimension,dict,blocksize,1,20)
+plotHelper1D(final$Import,domainImport,"Import ratio",final$GDP,domainGDP,"GDP",estimatorGDPImpLS,"Import ratio to GDP LS")
+
+
+estimatorGDPLife <- localPolynomsEstimation(final$Life.expectation,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01)
+plotHelper1D(final$Life.expectation,domainLifeExpectation,"Life expectation",final$GDP,domainGDP,"GDP",estimatorGDPLife,"Life expectation to GDP")
+
+estimatorGDPLifeLS <- leastSquaresEstimation(final$Life.expectation,final$GDP,dimension,dict,blocksize,1,20)
+plotHelper1D(final$Life.expectation,domainLifeExpectation,"Life expectation",final$GDP,domainGDP,"GDP",estimatorGDPLifeLS,"Life expectation to GDP LS")
+
+estimatorGDPWorker <- localPolynomsEstimation(final$Worker,final$GDP,ordre,dimension,noyau(dimension),blocksize,0.01,0.4,0.01)
+plotHelper1D(final$Worker,domainWorker,"Worker ratio to population",final$GDP,domainGDP,"GDP",estimatorGDPWorker,"Worker ratio to GDP")
+
+estimatorGDPWorkerLS <- leastSquaresEstimation(final$Worker,final$GDP,dimension,dict,blocksize,1,20)
+plotHelper1D(final$Worker,domainWorker,"Worker ratio to population",final$GDP,domainGDP,"GDP",estimatorGDPWorkerLS,"Worker ratio to GDP LS")
 
 dimension <- 2
 ordre <- 4
