@@ -15,9 +15,6 @@ xdatapoints <- rbind(database[,1],database[,4])
 a<-0
 b<-1
 xpoints <- (1:20)/20*(b-a)+a
-ytemp <- rep(xpoints,each=length(xpoints))
-xtemp <- rep(xpoints,length(xpoints))
-x2points <- rbind(xtemp,ytemp)
 
 xdatapoints <- normalize(xdatapoints)
 

@@ -13,6 +13,10 @@ crossValidation <- function(xdatapoints, ydatapoints, estimatorGenerator,dimensi
 	risk <- 0
 	numdatapoints <- length(xdatapoints)/dimension
 	dim(xdatapoints)=c(dimension,numdatapoints)
+  
+  xdatapoints <- xdatapoints[,sample.int(numdatapoints)]
+  
+	dim(xdatapoints)=c(dimension,numdatapoints)
 	
 	for( index in seq(1,numdatapoints,by=blocksize)){
 		xtestpoints <- xdatapoints[,index:min(numdatapoints,index+blocksize-1)]
