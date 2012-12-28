@@ -4,6 +4,7 @@
 \usepackage[margin=2cm]{geometry}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{framed}
 
 \title
 {{\em MAP 553 - Statistical learning and nonparametric estimation}\\
@@ -29,11 +30,120 @@ Numerical project\\
   basicstyle=\tiny,
   rangeprefix=##--,
   rangesuffix=----,
-  includerangemarker=false}
+  includerangemarker=false,
+  caption=Graph generating script}
+\begin{framed}
 \lstinputlisting{../map553/q.R}
-\lstinputlisting{../map553/localPolynomsEstimation.R}
-\lstinputlisting{../map553/leastSquaresEstimation.R}
-\lstinputlisting{../map553/crossValidation.R}
+\end{framed}
 
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Local polynoms estimation}
+\begin{framed}
+\lstinputlisting{../map553/localPolynomsEstimation.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Least squares estimation}
+\begin{framed}
+\lstinputlisting{../map553/leastSquaresEstimation.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Cross-validation}
+\begin{framed}
+\lstinputlisting{../map553/crossValidation.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Local polynoms estimator generator}
+\begin{framed}
+\lstinputlisting{../map553/localPolynomsEstimatorGenerator.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Least squares estimator generator}
+\begin{framed}
+\lstinputlisting{../map553/leastSquaresEstimatorGenerator.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Gaussian Kernel}
+\begin{framed}
+\lstinputlisting{../map553/gaussianNoyau.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Rectangular Kernel}
+\begin{framed}
+\lstinputlisting{../map553/rectangularNoyau.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Normalize}
+\begin{framed}
+\lstinputlisting{../map553/normalize.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=Trigonometric dictionary}
+\begin{framed}
+\lstinputlisting{../map553/trigonometricDictionary.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=1D plot helper}
+\begin{framed}
+\lstinputlisting{../map553/plotHelper1D.R}
+\end{framed}
+
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false,
+  caption=1D plot helper}
+\begin{framed}
+\lstinputlisting{../map553/plotHelper1D.R}
+\end{framed}
 
 \end{document}
