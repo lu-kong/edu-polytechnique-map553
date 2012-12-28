@@ -1,0 +1,40 @@
+\documentclass[a4paper, 12pt, titlepage]{article}
+
+% Including needed packages
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{listings}
+
+\title
+{{\em MAP 553 - Statistical learning and nonparametric estimation}\\
+Numerical project\\
+{\bf Report}}
+\author{EZZAKI Mahmoud \and ROHRMANN Till}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Problem description}
+
+\section{Data exploration}
+
+\section{Interpretation}
+
+\appendix
+\section{Annex}
+\lstset{language=R,
+  basicstyle=\tiny,
+  rangeprefix=##--,
+  rangesuffix=----,
+  includerangemarker=false}
+\lstinputlisting{../map553/q.R}
+\lstinputlisting{../map553/localPolynomsEstimation.R}
+\lstinputlisting{../map553/leastSquaresEstimation.R}
+\lstinputlisting{../map553/
+\lstinputlisting{../map553/crossValidation.R}
+
+
+\end{document}
